@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,66 +11,99 @@ body {
     align-items: center;
     justify-content: flex-start; /* Positions it at the top */
     height: 100vh;
-    background-color: #f4f4f4;
-    padding-top: 50px; /* Adds space from the top */
+    background: linear-gradient(135deg, #3a6186, #89253e); /* Gradient Background */
+    padding-top: 50px;
+    color: white;
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .calculator {
-    background: white;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent effect */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    width: 270px;
     text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 #display {
     width: 100%;
-    height: 50px;
+    height: 60px;
     text-align: right;
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: none;
-    background: #eee;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 8px;
 }
 
 button {
     width: 100%;
-    height: 50px;
-    font-size: 1.2em;
+    height: 55px;
+    font-size: 1.4em;
     border: none;
-    background: #ddd;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 0.3s;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 button:hover {
-    background: #bbb;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
 }
 
 button:active {
-    background: #999;
+    background: rgba(255, 255, 255, 0.5);
 }
 
-button:nth-child(17) { /* Equals button */
-    background: #f39c12;
-    color: white;
+/* Special Buttons */
+button:nth-child(1) { /* Clear Button */
+    background: #e74c3c;
+}
+
+button:nth-child(1):hover {
+    background: #c0392b;
+}
+
+button:nth-child(17) { /* Equals Button */
+    background: #2ecc71;
 }
 
 button:nth-child(17):hover {
+    background: #27ae60;
+}
+
+button:nth-child(5),
+button:nth-child(10),
+button:nth-child(14),
+button:nth-child(18) { /* Operators */
+    background: #f39c12;
+}
+
+button:nth-child(5):hover,
+button:nth-child(10):hover,
+button:nth-child(14):hover,
+button:nth-child(18):hover {
     background: #e67e22;
 }
